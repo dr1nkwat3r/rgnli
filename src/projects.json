@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Olympic gold",
+        "year": 2024,
+        "role": "Design, development",
+        "description": "abc",
+        "media": [
+            { "type": "image", "src": "/test-1000height.jpeg" },
+            { "type": "video", "src": "/video-test.mp4"}, 
+            { "type": "image", "src": "/test-2.jpeg" } 
+             ],
+        "url": "https://www.wainao.me/wainao-reads/chinese-olympic-gold-champions-now-08122024",
+        "awards": ["Award1", "Award2"],
+        "awardLinks": ["https://www.google.com", "https://www.npr.org"]
+    },
+    {
+        "title": "The First Anniversary of the White Paper Protest: The Flame is Gone but the Heat Remains",
+        "year": 2024,
+        "role": "Design, development",
+        "description": "def",
+        "media": [
+            { "type": "image", "src": "/test-1000height.jpeg" }, 
+            { "type": "image", "src": "/test-2.jpeg" }, 
+            { "type": "video", "src": "/video-test.mp4"} ],
+        "url": "https://www.wainao.me/wainao-reads/fea-one-year-anniversary-of-A4-Protest-EN-04122024"
+    },
+    {
+        "title": "Hanfu",
+        "year": 2024,
+        "role": "Design, development",
+        "description": "xxxxx",
+        "media": [
+            { "type": "image", "src": "/test-1000height.jpeg" }, 
+            { "type": "image", "src": "/test-2.jpeg" }, 
+            { "type": "video", "src": "/video-test.mp4"} ],
+        "url": "https://www.wainao.me/wainao-reads/hanfu-in-taiwan-02122024"
+    }
+]
