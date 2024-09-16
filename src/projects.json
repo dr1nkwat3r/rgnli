@@ -1,38 +1,36 @@
 [
     {
-        "title": "Olympic gold",
+        "title": "Lives Changed by Gold: Where Are China's Olympic Champions Now?",
         "year": 2024,
-        "role": "Design, development",
-        "description": "abc",
-        "media": [
-            { "type": "image", "src": "/test-1000height.jpeg" },
-            { "type": "video", "src": "/video-test.mp4"}, 
-            { "type": "image", "src": "/test-2.jpeg" } 
-             ],
-        "url": "https://www.wainao.me/wainao-reads/chinese-olympic-gold-champions-now-08122024",
-        "awards": ["Award1", "Award2"],
-        "awardLinks": ["https://www.google.com", "https://www.npr.org"]
+        "role": "Design 📐 Development 👾 Data Visualization 📈",
+        "description": "This data report delves into the history of China's Olympic gold medalists to look at how winning on the world stage may have changed the athletes' individual lives. How do the immense pressure and expectations placed on these Chinese athletes by the country, its national system, and the Chinese public influence sports careers in China?\n\n(Original Title: 因金牌而改变一生 中国奥运冠军今何在？)",
+        "media": [{ "type": "image", "src": "/olympicgold/olympicgold-1.jpg" }, { "type": "video", "src": "/video-test.mp4"}, { "type": "image", "src": "/test-2.jpeg" } ],
+        "url": "https:"
     },
     {
         "title": "The First Anniversary of the White Paper Protest: The Flame is Gone but the Heat Remains",
-        "year": 2024,
-        "role": "Design, development",
-        "description": "def",
-        "media": [
-            { "type": "image", "src": "/test-1000height.jpeg" }, 
-            { "type": "image", "src": "/test-2.jpeg" }, 
-            { "type": "video", "src": "/video-test.mp4"} ],
+        "year": 2023,
+        "role": "Design 📐 Development 👾",
+        "description": "This interactive timeline commemorates the first anniversary of the White Paper Movement, a pivotal moment in recent Chinese history that was swiftly erased from official narratives. ",
+        "media": [{"type": "image", "src" : "/a4anniv/a4anniv-1.jpg"}, {} ],
         "url": "https://www.wainao.me/wainao-reads/fea-one-year-anniversary-of-A4-Protest-EN-04122024"
     },
     {
-        "title": "Hanfu",
+        "title": "Wearing Hanfu in Taiwan: Our Identity Beyond China's Official Hanfu Narrative",
         "year": 2024,
-        "role": "Design, development",
-        "description": "xxxxx",
-        "media": [
-            { "type": "image", "src": "/test-1000height.jpeg" }, 
-            { "type": "image", "src": "/test-2.jpeg" }, 
-            { "type": "video", "src": "/video-test.mp4"} ],
+        "role": "Design 📐 Development 👾",
+        "description": "This article features an interactive dress-up doll game that showcases the diversity of Hanfu fashion and the versatility and creativity of contemporary styling. The story looks at Taiwanese Hanfu enthusiasts and their thoughts on the intersection of politics and identity within this community and the broader cultural and political significance of Hanfu in Taiwan. \n\n(Original Title: 与谁同袍？我在台湾穿汉服：中国官方汉服叙事之外，我们的身份认同)",
+        "media": [{"type":"video", "src":"/hanfu/hanfu-1.mp4"}, {"type" : "video", "src":"/hanfu/hanfu-2.mp4"}],
         "url": "https://www.wainao.me/wainao-reads/hanfu-in-taiwan-02122024"
+    },
+    {
+        "title": "What do 355 Chinese and Foreign War Films Tell Us?",
+        "year": 2023,
+        "role": "Design 📐",
+        "description": "This data report examines Chinese war fims' struggles at the international box offices. Analyzing war-themed movies released between 2010 and 2022, my team looked at the complex dynamics between rising nationalism in China and the evolving portrayal of China's \"main melody\" ideology.",
+        "media": [{"type":"video", "src":"/warfilm.mp4"}, {"type":"image", "src":"/warfilm-2.jpg"}],
+        "url": "https://www.wainao.me/wainao-reads/fea-data-visualisation-of-war-movies-en-03242023",
+        "awards": ["Online Journalism Awards - Excellence in Visual Design Storytelling", "AAJA Awards - Online/Digital Journalism, Data"],
+        "awardLinks": ["https://awards.journalists.org/entries/what-do-355-chinese-and-foreign-war-films-tell-us/", "https://awards.aaja.org/2024-journalism-excellence-awards/excellence-in-online-digital-journalism-data"]
     }
 ]

@@ -11,6 +11,13 @@ const ProjectCard = ({ title, year, role, description, media, url, awards, award
     const [hideArrow, setHideArrow] = useState(false);
     const scrollContainerRef = useRef(null);
 
+    const longDescription = description.split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ));
+
     useEffect(() => {
         const handleScroll = () => {
           if (!scrollContainerRef.current) return;
@@ -41,54 +48,57 @@ const ProjectCard = ({ title, year, role, description, media, url, awards, award
       }, []);
 
   return (
-    <div className='card'>
-        <div className={`card__image-container ${hasMultipleMedia && hideArrow ? 'no-arrow' : 'gallery-gradient'}`}>
-            {/* <img src={images} alt={images} /> */}
-            
-            <div className='image-scroll' ref={scrollContainerRef}>
-              {mediaArray.map((item, i) => {
-              if (item.type === 'image') {
-                return <img key={i} src={`${path}${item.src}`} alt={`media-${i}`} />;
-              } else if (item.type === 'video') {
-                return (
-                  <video key={i} controls className="video-element">
+    <div className='container'>
+      <div className='card'>
+          <div className={`card__image-container ${hasMultipleMedia && hideArrow ? 'no-arrow' : 'gallery-gradient'}`}>
+              {/* <img src={images} alt={images} /> */}
+              
+              <div className='image-scroll' ref={scrollContainerRef}>
+          {mediaArray.map((item, i) => {
+            return (
+              <div key={i} className="image-scroll__item">
+                {item.type === 'image' && (
+                  <img src={`${path}${item.src}`} alt={`media-${i}`} />
+                )}
+                {item.type === 'video' && (
+                  <video webkit-playsinline playsInline loop muted autoPlay className="video-element">
                     <source src={`${path}${item.src}`} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-                );
-              }
-              return null;
-            })}
-            </div>
-
-            {hasMultipleMedia && <div className="arrow">
-                →<br/><span style={{ writingMode:'vertical-lr', textOrientation:'sideways', fontStyle:'italic' }} >scroll</span>
-                </div>}
-
-        </div>
-        <div className='card__info'>
-            <div className='card__title'>
-                <h2><a href={url} target='_blank'>{title}</a></h2>
-                <p><b>{role}</b> ({year})</p>
-            </div>
-            <div className='card__description'>
-                
-                <p>{description}. asdffsd. The quick brown fox jumps over the lazy dog.
-                <br/></p>
-
-                {awards && awards.length > 0 && (
-                <div className="awards">
-                    {awards.map((award, i) => (
-                        <span key={award}>
-                        <a href={awardLinks[i]} target="_blank" rel="noopener noreferrer">
-                            {award}
-                        </a>
-                        </span>
-                    ))}
-                </div>
                 )}
-                </div>
+              </div>
+            );
+          })}
         </div>
+  
+              {hasMultipleMedia && <div className="arrow">
+                  →<br/><span style={{ writingMode:'vertical-lr', textOrientation:'sideways', fontStyle:'italic' }} >scroll</span>
+                  </div>}
+  
+          </div>
+          <div className='card__info'>
+              <div className='card__title'>
+                  <h2><a href={url} target='_blank'>{title}</a></h2>
+                  <p><span className='card__role'>{role}</span> ({year})</p>
+              </div>
+              <div className='card__description'>
+                  
+                  <p>{longDescription}</p>
+  
+                  {awards && awards.length > 0 && (
+                  <div className="awards">
+                      {awards.map((award, i) => (
+                          <span key={award}>
+                          <a href={awardLinks[i]} target="_blank" rel="noopener noreferrer">
+                              {award}
+                          </a>
+                          </span>
+                      ))}
+                  </div>
+                  )}
+                  </div>
+          </div>
+      </div>
     </div>
   )
 }

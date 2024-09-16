@@ -8,7 +8,10 @@ const Carousel = () => {
 
   return (
     <div className="carousel-container">
-      <div style={{marginLeft:'100px'}}><h3>Collages</h3></div>
+      <div className='container'>
+        <h3>Collages</h3>
+      <span>various collages done for wainao sdfdfs</span>
+      </div>
       <div className="carousel gallery-gradient">
       {collages.map((collage, i) => (
           <div key={i}>
