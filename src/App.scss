@@ -27,7 +27,7 @@ a {
     font-weight: 700;
     font-style: italic;
     border-bottom: 1px solid;
-    color:rgb(0, 0, 237);
+    color:#0000ed;
   }
 }
 
@@ -88,21 +88,28 @@ footer {
 }
 
 .intro {
-  padding-top: 100px;
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, #ceceffcc 120%);
+  mix-blend-mode: multiply;
+  padding-top: 8px;
   // padding:8px 0 8px 6%;
   padding-left:6%;
   position: sticky;
   top: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
   z-index: 10;
   
   @media (max-width:768px) {
     padding-left:3%;
   }
+
+  h1 {
+    font-size: 2.9rem;
+  }
 }
 
 .shrink {
-  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 40%);
+  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(206, 206, 255, 0.8) 90%);
+  mix-blend-mode: multiply;
   padding: 8px 0 8px 6%;
 
   @media (max-width:768px) {
@@ -111,6 +118,7 @@ footer {
 
   h1 {
     font-size: 1rem;
+    opacity:0.9;
   }
 }
 
@@ -126,7 +134,12 @@ footer {
   &__text {
     grid-column: 1 / span 2;
     max-width: 100%;
-    line-height: 1.6;
+
+    p.top {
+      // font-weight: bold;
+      font-size: 1.65rem;
+      line-height: 1.3;
+    }
   }
 }
 
@@ -143,9 +156,16 @@ footer {
     cursor: help;
 
     &:hover {
-      color:rgb(0, 0, 237);
+      color:#0000ed;
       font-weight: bold;
     }
+  }
+
+  &__open {
+    transition: all 1s;
+    // border-bottom: 0.5px solid #0000ed;
+    // border-radius: 5px;
+    padding:3% 20px 10px 0;
   }
 }
 
@@ -223,8 +243,10 @@ footer {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     border-radius: 15px;
+    height:100%;
+    
     // width:920px;
-    // height:600px;
+    // height:550px;
     // max-width: 980px;
     // background-color: antiquewhite;
 
@@ -233,12 +255,24 @@ footer {
     }
 
     &__item {
+      // position: relative;
       flex-shrink: 0;
       width: 97%;
       height: 99%;
       border-radius: 15px;
-      object-fit: contain;
+      overflow: hidden;
+      // object-fit: contain;
       scroll-snap-align: start;
+      // align-self:center;
+      // width: 97%;
+
+      &:nth-child(1) {
+        width: 97%;
+      }
+
+      &:not(:nth-child(1)) {
+        width:99%;
+      }
     }
 
 
@@ -247,13 +281,14 @@ footer {
       // // max-height: 600px;
       // width:97%;
       // height: 99%;
-      // border-radius: 15px;
+      border-radius: 15px;
       // object-fit: contain;
       // scroll-snap-align: start;
       width: 100%;
       height: 100%;
-      border-radius: inherit;
-      object-fit: cover;
+      // border-radius: 15px;
+      // object-fit: contain;
+      object-position: 50% 0%;
       
       @media (max-width:768px) {
         border-radius: 8px;
@@ -337,7 +372,7 @@ footer {
 .carousel-container {
   position: relative;
   overflow: hidden;
-  width: 99vw;
+  width: 100vw;
   margin:0 auto;
 
   @media (max-width:768px) {
@@ -351,13 +386,14 @@ footer {
     text-align: left;
     opacity: 0.9;
     font-style: italic;
-    display: inline-block;
+    // display: inline-block;
+    // line-height: 3;
     
     @media (max-width:768px) {
       text-align: center;
       font-size: 1rem;
       display: block;
-      margin: 0;
+      margin: 0 0 16px 0;
     }
   }
 
@@ -412,6 +448,8 @@ footer {
   scroll-snap-type: x mandatory; 
   scroll-behavior: smooth;
   padding: 0 80px;
+  text-align: center;
+  align-items: flex-start;
   // scrollbar-width: none; /* For Firefox */
 
   @media (max-width:768px) {
@@ -420,20 +458,19 @@ footer {
     p {
       font-size: 0.8rem;
       opacity: 0.8;
+      line-height: 1.55;
     }
   }
 
-  div {
+  &__item {
     display: inline-block;
     flex: 0 0 auto;
-    display: flex;
     flex-direction: column;
     align-items: center;
     // width: 700px;
-    height: 600px;
+    height: 710px;
     scroll-snap-align: center; 
     transition: transform 0.3s ease;
-    // background-color: antiquewhite; 
 
     @media (max-width:768px) {
       height:auto;
@@ -441,14 +478,22 @@ footer {
     }
   }
 
-  img {
-    width: 100%;
-    max-height:560px;
+  img, video {
+    width: auto;
+    max-height:660px;
     border-radius: 8px;
-    // scroll-snap-align: center; 
-    // transition: transform 0.3s ease; 
-    object-fit: contain;
+    border: 0.5px solid #353535;
+    object-fit: cover;
+
+    @media (max-width:768px) {
+      width:100%;
+    }
   }
+
+  &__text {
+    padding: 0 10px;
+  }
+  
 }
 
 // .carousel::-webkit-scrollbar {

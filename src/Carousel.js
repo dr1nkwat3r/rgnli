@@ -9,15 +9,22 @@ const Carousel = () => {
   return (
     <div className="carousel-container">
       <div className='container'>
-        <h3>Collages</h3>
-      <span>various collages done for wainao sdfdfs</span>
+        <h3>Editorial Illustrations</h3>
+      {/* <span>Various editorial illustrations done for WhyNot</span> */}
       </div>
       <div className="carousel gallery-gradient">
       {collages.map((collage, i) => (
-          <div key={i}>
-            <img src={`${path}${collage.image}`} alt={`carousel-${i}`} className="carousel-image" />
-            <p><b>{collage.title}</b>&nbsp;&nbsp;&nbsp; {collage.caption}</p>
-            </div>
+        <div className='carousel__item' key={i}>
+          {collage.type === 'image' ? (
+            <img src={`${path}${collage.media}`} alt={`carousel-${i}`} className="carousel-image" />
+          ) : collage.type === 'video' ? (
+            <video playsInline loop muted autoPlay >
+              <source src={`${path}${collage.media}`} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : null}
+          <div className='carousel__text'><p><b>{collage.title}</b> &nbsp;({collage.year})</p></div>
+        </div>
         ))}
 
         {/* <div><img src={path + '/test-2.jpeg'}/>xxx</div>

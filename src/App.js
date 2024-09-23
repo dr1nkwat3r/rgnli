@@ -42,39 +42,31 @@ function App() {
       <div className='container'>
         <div className='blurb'>
           <div className='blurb__text'>
-            <p>
+            <p className='top'>
             I enjoy turning complex topics into engaging visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories.
             </p>
-            <p><i>Hello!</i> &nbsp;&nbsp; <a href='mailto:rgnhli@gmail.com' target='_blank'>Email</a> – <a href='https://www.linkedin.com/in/rgnli/' target='_blank'>LinkedIn</a> - <a href='https://www.instagram.com/rg1na/' target='_blank'>Instagram</a></p>
 
-            <div onClick={toggleExpand} className="more-blurb__button">
-                {isExpanded ? '(-)' : '(+)'}
-              </div>
+            <div style={{display:'flex'}}>
+              <div><i>Hello!</i> &nbsp;</div>
+              <div onClick={toggleExpand} className="more-blurb__button">
+                  {isExpanded ? '(–)' : '(+)'}
+                </div>
+            </div>
 
             <div className={`more-blurb ${isExpanded ? 'expanded' : 'collapsed'}`}>
-              <a>Résumé</a>
-            </div>
             
+              <div className='more-blurb__open'>
+                <a href='mailto:rgnhli@gmail.com' target='_blank'>Email</a> – <a href='https://www.linkedin.com/in/rgnli/' target='_blank'>LinkedIn</a> - <a href='https://www.instagram.com/rg1na/' target='_blank'>Instagram</a>
+    
+                <p><a href='https://docs.google.com/document/d/1nFUFd6_Xxsi_HMOw945I3pphHVzT_ZgPl9A_wIjA3YI/edit' target='_blank'>Résumé</a></p>
+              </div>
+              
+            </div>
           </div>
         </div>
       </div>
-
-      {/* <div style={{margin:'0 100px'}}>
-        {projects.map((work, i) => (
-          <ProjectCard
-          key={i}
-          title={work.title}
-          year={work.year}
-          role={work.role}
-          description={work.description}
-          images={work.images}
-          url={work.url}
-          awards={work.awards}
-          awardLinks={work.awardLinks}
-          />
-        )
-        )}
-      </div> */}
+      
+      <div style={{borderBottom:'0.5px dotted #000069', paddingTop:'50px'}}></div>
 
       {projects.map((work, i) => (
         <React.Fragment key={i}>
