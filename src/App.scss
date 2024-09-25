@@ -209,6 +209,7 @@ footer {
     // background-color: rgba(0, 255, 255, 0.384);
     pointer-events: none;
     z-index: 1;
+    -webkit-transform:translate3d(0,0,0);
 
     @media (max-width:768px) {
       width:15px;
@@ -226,6 +227,7 @@ footer {
     letter-spacing: 1px;
     opacity: 80%;
     animation: wobble 1s ease infinite;
+    -webkit-transform:translate3d(0,0,0);
 
     @media (max-width:768px) {
       font-size: 9px;
