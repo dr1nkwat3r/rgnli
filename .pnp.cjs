@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gh-pages", "npm:6.1.1"],\
             ["react", "npm:18.3.1"],\
             ["react-dom", "virtual:472a6cd76822673603b858e9f636c71049c584495a251c4b513ba1ee42a37cb91a999d14c44242f3e632c58b4c2ca24780acc6f4cf9dd04a2868339c01016faa#npm:18.3.1"],\
+            ["react-ga4", "npm:2.1.0"],\
             ["react-scripts", "virtual:472a6cd76822673603b858e9f636c71049c584495a251c4b513ba1ee42a37cb91a999d14c44242f3e632c58b4c2ca24780acc6f4cf9dd04a2868339c01016faa#npm:5.0.1"],\
             ["sass", "npm:1.78.0"],\
             ["web-vitals", "npm:2.1.4"]\
@@ -15405,6 +15406,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["react-ga4", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/react-ga4-npm-2.1.0-2d2287b7a6-f7fb411414.zip/node_modules/react-ga4/",\
+          "packageDependencies": [\
+            ["react-ga4", "npm:2.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["react-is", [\
         ["npm:16.13.1", {\
           "packageLocation": "./.yarn/cache/react-is-npm-16.13.1-a9b9382b4f-f7a19ac349.zip/node_modules/react-is/",\
@@ -15862,6 +15872,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gh-pages", "npm:6.1.1"],\
             ["react", "npm:18.3.1"],\
             ["react-dom", "virtual:472a6cd76822673603b858e9f636c71049c584495a251c4b513ba1ee42a37cb91a999d14c44242f3e632c58b4c2ca24780acc6f4cf9dd04a2868339c01016faa#npm:18.3.1"],\
+            ["react-ga4", "npm:2.1.0"],\
             ["react-scripts", "virtual:472a6cd76822673603b858e9f636c71049c584495a251c4b513ba1ee42a37cb91a999d14c44242f3e632c58b4c2ca24780acc6f4cf9dd04a2868339c01016faa#npm:5.0.1"],\
             ["sass", "npm:1.78.0"],\
             ["web-vitals", "npm:2.1.4"]\

@@ -4,10 +4,28 @@ import './App.scss';
 import Carousel from './Carousel';
 import ProjectCard from './ProjectCard';
 import projects from './projects.json';
+import ReactGA from 'react-ga4';
+const TRACKING_ID = 'G-EKSDMFT1B3';
+
+ReactGA.initialize(TRACKING_ID);
 
 const path = process.env.PUBLIC_URL;
 
 function App() {
+
+  ReactGA.send({
+    hitType: "pageview",
+    page:"/",
+    title:"homepage",
+  });
+
+  const handleClick = (link) => {
+    ReactGA.event({
+      category: 'contact',
+      action: 'click',
+      label: 'contact',
+    });
+  };
 
   const [isShrunk, setIsShrunk] = useState(false);
 
@@ -56,9 +74,9 @@ function App() {
             <div className={`more-blurb ${isExpanded ? 'expanded' : 'collapsed'}`}>
             
               <div className='more-blurb__open'>
-                <a href='mailto:rgnhli@gmail.com' target='_blank'>Email</a> – <a href='https://www.linkedin.com/in/rgnli/' target='_blank'>LinkedIn</a> - <a href='https://www.instagram.com/rg1na/' target='_blank'>Instagram</a>
+                <a href='mailto:rgnhli@gmail.com' target='_blank' onClick={() => handleClick("email")}>Email</a> – <a href='https://www.linkedin.com/in/rgnli/' target='_blank' onClick={() => handleClick("linkedin")}>LinkedIn</a> - <a href='https://www.instagram.com/rg1na/' target='_blank' onClick={() => handleClick("instagram")}>Instagram</a>
     
-                <p><a href='https://docs.google.com/document/d/1nFUFd6_Xxsi_HMOw945I3pphHVzT_ZgPl9A_wIjA3YI/edit' target='_blank'>Résumé</a></p>
+                <p><a href='https://docs.google.com/document/d/1nFUFd6_Xxsi_HMOw945I3pphHVzT_ZgPl9A_wIjA3YI/edit' target='_blank' onClick={() => handleClick("resume")}>Résumé</a></p>
               </div>
               
             </div>
@@ -87,7 +105,7 @@ function App() {
           This site is built with React.js and hosted on <a href='https://github.com/dr1nkwat3r' target='_blank'>Github</a>.
           </div>
           <div>
-            <a href='mailto:rgnhli@gmail.com' target='_blank'>email</a> – <a href='https://www.linkedin.com/in/rgnli/' target='_blank'>linkedin</a> - <a href='https://www.instagram.com/rg1na/' target='_blank'>instagram</a>
+            <a href='mailto:rgnhli@gmail.com' target='_blank' onClick={() => handleClick("email")}>email</a> – <a href='https://www.linkedin.com/in/rgnli/' target='_blank' onClick={() => handleClick("linkedin")}>linkedin</a> - <a href='https://www.instagram.com/rg1na/' target='_blank' onClick={() => handleClick("instagram")}>instagram</a>
             </div>
 
       </footer>
