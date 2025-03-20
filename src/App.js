@@ -10,7 +10,7 @@ const TRACKING_ID = 'G-EKSDMFT1B3';
 ReactGA.initialize(TRACKING_ID);
 
 const path = process.env.PUBLIC_URL;
-
+ 
 function App() {
 
   ReactGA.send({
