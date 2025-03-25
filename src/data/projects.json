@@ -1,11 +1,36 @@
 [
     {
+        "title": "Indiscriminate Attacks in China from 2000 to 2024—The Disillusioned Middle-Aged, Social Grievances, and the Death Penalty",
+        "year": 2025,
+        "role": "Design 📐 Development 👾 Data Visualization 📈",
+        "description": "With the surge of random, indiscriminate mass attack incidents that occurred across China in 2024, this report examines the current Chinese society through data, exploring the underlying societal trends and potential contributing factors, and providing insights into the broader social dynamics and conditions shaping China.\n\n(Original Title: “失意的中年人”，社会怨气，以及“火速办案”和死刑——2000到2024，我们从中国的无差别袭击事件看到什么？)",
+        "media": [{ "type": "video", "src": "/indiscriminate/indiscriminate-1.mp4" }, { "type": "image", "src": "/indiscriminate/indiscriminate-2.jpg" } , { "type": "image", "src": "/indiscriminate/indiscriminate-3.jpg" }  ],
+        "url": "https://www.wainao.me/wainao-reads/china-indiscriminate-attacks-social-grievances-frustrated-men-03212025/"
+    },
+    {
+        "id": "testproject",
+        "title": "WhyNot Website Redesign",
+        "year": 2024,
+        "role": "UX 🔮 Design 📐",
+        "description": "Complete redesign of the WhyNot website to improve overall user experience, site performance, and streamline visual identity to create a clearer, more engaging, and cohesive brand presence.",
+        "media": [{ "type": "image", "src": "/wainao-redesign/wainao-redesign-1.jpg" }, { "type": "image", "src": "/wainao-redesign/wainao-redesign-2.jpg" }],
+        "url": "/whynot-website-redesign",
+        "hasProjectPage": true
+    },
+    {
         "title": "Lives Changed by Gold: Where Are China's Olympic Champions Now?",
         "year": 2024,
         "role": "Design 📐 Development 👾 Data Visualization 📈",
         "description": "This data report delves into the history of China's Olympic gold medalists to look at how winning on the world stage may have changed the athletes' individual lives. How do the immense pressure and expectations placed on these Chinese athletes by the country, its national system, and the Chinese public influence sports careers in China?\n\n(Original Title: 因金牌而改变一生 中国奥运冠军今何在？)",
         "media": [{ "type": "image", "src": "/olympicgold/olympicgold-1.jpg" }, { "type": "video", "src": "/olympicgold/olympicgold-2.mp4" }, { "type": "video", "src": "/olympicgold/olympicgold-3.mp4" }, { "type": "image", "src": "/olympicgold/olympicgold-4.jpg" } ],
         "url": "https://www.wainao.me/wainao-reads/chinese-olympic-gold-champions-now-08122024"
+    },
+    {
+        "title": "Instagram Template Design",
+        "year": 2024,
+        "role": "Design 📐",
+        "description": "Refreshing WHYNOT's visual identity on Instagram alongside the launch of the website revamp. I designed Instagram templates for the social media team. The goal was to create an easy-to-use system that reinforces the WhyNot brand while maintaining focus on the journalistic content. The templates ensure consistency, clarity, and brand cohesion.",
+        "media": [{ "type": "image", "src": "/instagram-design/instagram-template-1.jpg" }]
     },
     {
         "title": "The First Anniversary of the White Paper Protest: The Flame is Gone but the Heat Remains",

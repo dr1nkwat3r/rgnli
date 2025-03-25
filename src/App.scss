@@ -16,12 +16,13 @@ body {
 
 h1 {
   font-size: 1.5rem;
+  color: rgb(34, 34, 176);
 }
 
 a {
   text-decoration: none;
   border-bottom: 1px dotted;
-  color: rgb(0, 0, 105);
+  color: #000069;
 
   &:hover {
     font-weight: 700;
@@ -79,6 +80,7 @@ footer {
 }
 
 .container {
+  position: relative;
   // max-width: 1350px;
   margin:0 6%;
 
@@ -88,29 +90,55 @@ footer {
 }
 
 .intro {
-  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, #ceceffcc 120%);
-  mix-blend-mode: multiply;
+  // background: linear-gradient(0deg, rgba(255,255,255,0) 20%, hsla(240, 100%, 90%, 0.3) 100%);
+  // mix-blend-mode: multiply;
   padding-top: 8px;
   // padding:8px 0 8px 6%;
   padding-left:6%;
-  position: sticky;
+  position: fixed;
   top: 0;
-  transition: all 0.4s ease-in-out;
+  width: 100%;
   z-index: 10;
   
   @media (max-width:768px) {
     padding-left:3%;
   }
 
+  &__bg {
+    background: linear-gradient(0deg, rgba(255,255,255,0) 20%, hsla(240, 100%, 90%, 0.5) 100%);
+    mix-blend-mode: multiply;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+
   h1 {
     font-size: 2.9rem;
+    transition: all 0.2s ease-in-out;
+    letter-spacing: -1px;
   }
+
+  a {
+    border-bottom: 0;
+
+    &:hover {
+      font-style: normal;
+      color: #000069;
+    }
+  }
+
 }
 
+
 .shrink {
-  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(206, 206, 255, 0.8) 90%);
-  mix-blend-mode: multiply;
-  padding: 8px 0 8px 6%;
+  // background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(206, 206, 255, 0.8) 90%);
+  // mix-blend-mode: multiply;
+  // padding: 8px 0 8px 6%;
+  
 
   @media (max-width:768px) {
     padding-left: 3%;
@@ -119,6 +147,8 @@ footer {
   h1 {
     font-size: 1rem;
     opacity:0.9;
+    transition: all 0.1s ease-in-out;
+    letter-spacing: 0px;
   }
 }
 
@@ -126,6 +156,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap:30px;
+  padding-top: 150px;
 
   @media (max-width:768px) {
     display: flex;
@@ -162,7 +193,7 @@ footer {
   }
 
   &__open {
-    transition: all 1s;
+    // transition: all 1s;
     // border-bottom: 0.5px solid #0000ed;
     // border-radius: 5px;
     padding:3% 20px 10px 0;
@@ -182,10 +213,21 @@ footer {
   width:100%;
   margin: 4em 0;
   // background-color: rgba(255, 255, 0, 0.302);
+  padding: 10px 20px 10px 10px;
+  border-radius: 20px;
 
   @media (max-width:768px) {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  &:hover {
+    background-color: rgb(244, 244, 244);
+    transition: all 0.2s;
+
+    .gallery-gradient:after {
+      background: linear-gradient(to left, rgba(244, 244, 244, 0.315), transparent);
+    }
   }
 
   &__image-container {
@@ -205,7 +247,7 @@ footer {
     right: 0;
     width: 25px;
     height: 100%;
-    background: linear-gradient(to left, rgba(252, 252, 252, 1), transparent);
+    background: linear-gradient(to left, rgba(252, 252, 252, 0.8), transparent);
     // background-color: rgba(0, 255, 255, 0.384);
     pointer-events: none;
     z-index: 1;
@@ -218,20 +260,35 @@ footer {
 
   .arrow {
     position: absolute;
-    top:45%;
-    right:-3px;
-    pointer-events: none;
+    top:92%;
+    right:-9px;
+    // pointer-events: none;
     text-align: right;
     z-index: 2;
-    font-size: 11px;
+    // font-size: 11px;
     letter-spacing: 1px;
     opacity: 80%;
-    animation: wobble 1s ease infinite;
-    -webkit-transform:translate3d(0,0,0);
+    // animation: wobble 1s ease infinite;
+    // -webkit-transform:translate3d(0,0,0);
+    border:none;
+    background-color: transparent;
+    filter: invert(19%) sepia(97%) saturate(4166%) hue-rotate(241deg) brightness(97%) contrast(111%);
 
-    @media (max-width:768px) {
-      font-size: 9px;
+    &:hover {
+      filter:invert(57%) sepia(0%) saturate(216%) hue-rotate(210deg) brightness(106%) contrast(125%);
+      opacity:100%;
+      transform: translate(5px,0px);
+      transition: all 0.2s ease-in;
     }
+
+    // @media (max-width:768px) {
+    //   font-size: 9px;
+    // }
+  }
+
+  .rightarrow {
+    width: 15px;
+    height: 15px;
   }
 
   .no-arrow .arrow {
@@ -291,6 +348,8 @@ footer {
       // border-radius: 15px;
       // object-fit: contain;
       object-position: 50% 0%;
+      border:1px solid rgb(233, 233, 233);
+      // padding: 3px;
       
       @media (max-width:768px) {
         border-radius: 8px;
@@ -310,6 +369,7 @@ footer {
   }
 
   &__title {
+    
     h2 {
       font-weight: 800;
       font-style: italic;
@@ -334,11 +394,17 @@ footer {
     }
 
     a:hover {
-      border-bottom: 1px solid;
-      background-color: white;
+      border-bottom: 1.5px solid #0000ed;
       font-weight: 800;
       // font-style: normal;
-      color:rgb(0, 0, 237);
+      // color:rgb(0, 0, 237);
+
+      .out-icon {
+        transform: translate(0px, 1px);
+        transition: all 0.1s ease-in;
+        // filter: invert(7%) sepia(65%) saturate(7459%) hue-rotate(243deg) brightness(78%) contrast(122%);
+        filter:invert(57%) sepia(0%) saturate(216%) hue-rotate(210deg) brightness(106%) contrast(125%);
+      }
     }
   }
 
@@ -349,7 +415,7 @@ footer {
 
   &__description {
     margin-top: auto;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
     font-size: 0.9rem;
     line-height: 1.25;
   }
@@ -367,6 +433,18 @@ footer {
       color: #575757;;
     }
   }
+}
+
+.out-icon {
+  filter: invert(19%) sepia(97%) saturate(4166%) hue-rotate(241deg) brightness(97%) contrast(111%);
+  transform: translate(-4px, 6px);
+  margin-left: 2px;
+}
+
+//carousel right arrow
+.right-arrow {
+  filter: invert(19%) sepia(97%) saturate(4166%) hue-rotate(241deg) brightness(97%) contrast(111%);
+  transform: translate(1px, 1px);
 }
 
 // CAROUSEL
@@ -388,14 +466,42 @@ footer {
     text-align: left;
     opacity: 0.9;
     font-style: italic;
-    // display: inline-block;
+    display: inline-block;
     // line-height: 3;
+
+    &:hover {
+      .right-arrow {
+        transform: translate(9px, 1px);
+        transition: all 0.2s ease-out;
+      }
+    }
+  
     
     @media (max-width:768px) {
       text-align: center;
       font-size: 1rem;
       display: block;
       margin: 0 0 16px 0;
+    }
+  }
+
+  &__more {
+    white-space: nowrap;
+
+    a {
+      border-bottom: none;
+
+      &:hover {
+        img {
+          transform: translate(6px, 0px);
+          transition: all 0.4s ease-out;
+        }
+      }
+    }
+    
+    img {
+      border: none !important;
+      transform: translate(-2px, 0px);
     }
   }
 

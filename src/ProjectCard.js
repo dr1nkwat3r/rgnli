@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './App.scss';
+import OutIcon from './diagonal-arrow.svg';
+import RightArrow from './right-arrow.svg';
 
 const path = process.env.PUBLIC_URL;
 
-const ProjectCard = ({ title, year, role, description, media, url, awards, awardLinks }) => {
+const ProjectCard = ({ title, year, role, description, media, url, awards, awardLinks, hasProjectPage, projectPath }) => {
 
     const mediaArray = Array.isArray(media) ? media : [media];
     const hasMultipleMedia = mediaArray.length > 1;
@@ -17,6 +20,18 @@ const ProjectCard = ({ title, year, role, description, media, url, awards, award
         <br />
       </React.Fragment>
     ));
+
+    const handleNext = () => {
+      if (!scrollContainerRef.current) return;
+      const container = scrollContainerRef.current;
+      const scrollAmount = container.clientWidth;
+      // container.scrollTo({ 
+      //   left: container.scrollLeft + scrollAmount, 
+      //   behavior: "smooth" 
+      // });
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  
 
     useEffect(() => {
         const handleScroll = () => {
@@ -76,16 +91,24 @@ const ProjectCard = ({ title, year, role, description, media, url, awards, award
               })}
           </div>
     
-                {hasMultipleMedia && <div className="arrow">
+                {/* {hasMultipleMedia && <div className="arrow">
                     →<br/><span style={{ writingMode:'vertical-lr', textOrientation:'sideways', fontStyle:'italic' }} >scroll</span>
-                    </div>}
+                    </div>} */}
+                
+                {hasMultipleMedia && (<button className="arrow" onClick={handleNext}><img src={RightArrow} className='rightarrow' /></button>)}
     
             </div>
             <div className='card__info'>
                 <div className='card__title'>
-                    <h2><a href={url} target='_blank'>{title}</a></h2>
+                    {/* <h2>{ hasProjectPage ? (
+                      <Link to={url}>{title}</Link>
+                    ) : (<><a href={url} target='_blank'>{title} <img src={OutIcon} alt='external link' className='out-icon' width="20" height="20" /></a></> ) }</h2> */}
+                    
+                    <h2>{url ? (hasProjectPage ? (<Link to={url}>{title}</Link>) : (<><a href={url} target='_blank' rel="noopener noreferrer">{title} <img src={OutIcon} alt='external link' className='out-icon' width="20" height="20" /></a></> )) : (<>{title}</>)}</h2>
                     <p><span className='card__role'>{role}</span> ({year})</p>
                 </div>
+
+
                 <div className='card__description'>
                     
                     <p>{longDescription}</p>
