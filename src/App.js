@@ -7,16 +7,13 @@ import ProjectCard from './ProjectCard';
 import projects from './data/projects.json';
 import ReactGA from 'react-ga4';
 
-import ScrollToTop from './ScrollToTop';
-import TestRoute from './pages/TestRoute';
+// import ScrollToTop from './ScrollToTop';
 import WhynotWebsite from './pages/WhynotWebsite';
 import EditorialIllus from './pages/EditorialIllus';
 
 const TRACKING_ID = 'G-EKSDMFT1B3';
 ReactGA.initialize(TRACKING_ID);
 
-const path = process.env.PUBLIC_URL;
- 
 function App() {
   const [isShrunk, setIsShrunk] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -147,7 +144,6 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/testroute" element={<TestRoute />} />
             <Route path="/whynot-website-redesign" element={<WhynotWebsite />} />
             <Route path="/editorial-illustrations" element={<EditorialIllus />} />
           </Routes>
