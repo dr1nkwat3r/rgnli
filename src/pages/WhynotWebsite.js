@@ -1,12 +1,13 @@
 import React from 'react';
 import '../AppPages.scss';
 import '../App.scss';
-
+import ScrollToTop from '../ScrollToTop';
 const path = process.env.PUBLIC_URL;
 
 const WhynotWebsite = () => {
   return (
     <div className='detail-page'>
+      <ScrollToTop />
       <div className='detail-padding' />
       <div className='container'>
         <h2 className='project__title'>Whynot Website Redesign</h2>
@@ -52,7 +53,9 @@ const WhynotWebsite = () => {
 
 
           </div>
-          <div><img src={path + `/wainao-redesign/wainao-redesign-before.jpg`} style={{ padding:"0% 5%" }} /></div>
+          <div><img src={path + `/wainao-redesign/wainao-redesign-before.jpg`} style={{ padding:"0% 5%" }} />
+          <span className='project__caption'>Old website</span>
+          </div>
         </div>
 
         <div className='project__grid' style={{ padding:"7% 0%"}}>

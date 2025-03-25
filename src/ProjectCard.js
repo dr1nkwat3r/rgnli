@@ -95,7 +95,7 @@ const ProjectCard = ({ title, year, role, description, media, url, awards, award
                     →<br/><span style={{ writingMode:'vertical-lr', textOrientation:'sideways', fontStyle:'italic' }} >scroll</span>
                     </div>} */}
                 
-                {hasMultipleMedia && (<button className="arrow" onClick={handleNext}><img src={RightArrow} className='rightarrow' /></button>)}
+                {hasMultipleMedia && (<button className="arrow" onClick={handleNext}><img src={RightArrow} className='right-arrow' /></button>)}
     
             </div>
             <div className='card__info'>

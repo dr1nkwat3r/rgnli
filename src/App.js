@@ -7,6 +7,7 @@ import ProjectCard from './ProjectCard';
 import projects from './data/projects.json';
 import ReactGA from 'react-ga4';
 
+import ScrollToTop from './ScrollToTop';
 import TestRoute from './pages/TestRoute';
 import WhynotWebsite from './pages/WhynotWebsite';
 import EditorialIllus from './pages/EditorialIllus';
@@ -91,7 +92,7 @@ function App() {
           <div className='blurb'>
             <div className='blurb__text'>
               <p className='top'>
-              I enjoy turning complex topics into engaging visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories.
+              I enjoy turning complex topics into visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories.
               </p>
   
               <div style={{display:'flex'}}>
@@ -131,6 +132,7 @@ function App() {
 
   return (
       <BrowserRouter>
+      {/* <ScrollToTop />  */}
         <div className="App">
     
           {/* <header className={`intro ${isShrunk ? 'shrink' : ''}`}>

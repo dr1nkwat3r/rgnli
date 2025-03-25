@@ -120,6 +120,10 @@ footer {
     font-size: 2.9rem;
     transition: all 0.2s ease-in-out;
     letter-spacing: -1px;
+
+    @media (max-width:768px) {
+      font-size: 2.95rem;
+    }
   }
 
   a {
@@ -170,6 +174,10 @@ footer {
       // font-weight: bold;
       font-size: 1.65rem;
       line-height: 1.3;
+
+      @media (max-width:768px) {
+        font-size: 1.2rem;
+      }
     }
   }
 }
@@ -219,6 +227,8 @@ footer {
   @media (max-width:768px) {
     display: flex;
     flex-direction: column-reverse;
+    border-radius: 10px;
+    padding: 10px 0px;
   }
 
   &:hover {
@@ -272,7 +282,7 @@ footer {
     // -webkit-transform:translate3d(0,0,0);
     border:none;
     background-color: transparent;
-    filter: invert(19%) sepia(97%) saturate(4166%) hue-rotate(241deg) brightness(97%) contrast(111%);
+    // filter: invert(19%) sepia(97%) saturate(4166%) hue-rotate(241deg) brightness(97%) contrast(111%);
 
     &:hover {
       filter:invert(57%) sepia(0%) saturate(216%) hue-rotate(210deg) brightness(106%) contrast(125%);
@@ -284,11 +294,6 @@ footer {
     // @media (max-width:768px) {
     //   font-size: 9px;
     // }
-  }
-
-  .rightarrow {
-    width: 15px;
-    height: 15px;
   }
 
   .no-arrow .arrow {
@@ -310,7 +315,7 @@ footer {
     // background-color: antiquewhite;
 
     @media (max-width:768px) {
-      border-radius: 8px;
+      border-radius: 0px;
     }
 
     &__item {
@@ -326,11 +331,16 @@ footer {
       // width: 97%;
 
       &:nth-child(1) {
-        width: 97%;
+        width: 98%;
       }
 
       &:not(:nth-child(1)) {
-        width:99%;
+        width:98%;
+      }
+
+      @media (max-width:768px) {
+        border-radius: 8px;
+        padding-left: 5px;
       }
     }
 
@@ -366,6 +376,10 @@ footer {
     flex:1;
     display: flex;
     flex-direction: column;
+
+    @media (max-width:768px) {
+      padding:0px 10px;
+    }
   }
 
   &__title {
@@ -443,8 +457,10 @@ footer {
 
 //carousel right arrow
 .right-arrow {
-  filter: invert(19%) sepia(97%) saturate(4166%) hue-rotate(241deg) brightness(97%) contrast(111%);
+  filter:invert(14%) sepia(100%) saturate(4449%) hue-rotate(243deg) brightness(78%) contrast(152%);
   transform: translate(1px, 1px);
+  width: 15px;
+  height: 15px;
 }
 
 // CAROUSEL
@@ -460,6 +476,14 @@ footer {
     width: 100vw;
     color:white;
     padding: 5% 0;
+
+    a {
+      color: white;
+    }
+
+    .right-arrow {
+      filter: invert(68%) sepia(57%) saturate(206%) hue-rotate(203deg) brightness(100%) contrast(105%);
+    }
   }
 
   h3 {
@@ -476,7 +500,6 @@ footer {
       }
     }
   
-    
     @media (max-width:768px) {
       text-align: center;
       font-size: 1rem;
@@ -596,6 +619,10 @@ footer {
     @media (max-width:768px) {
       width:100%;
     }
+  }
+
+  video {
+    will-change: transform;
   }
 
   &__text {
