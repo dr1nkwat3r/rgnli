@@ -82,6 +82,11 @@ function App() {
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
+    ReactGA.event({
+      category: 'Interaction',
+      action: 'click',
+      label: isExpanded ? 'collapse info' : 'expand info',
+    });
   };
 
   

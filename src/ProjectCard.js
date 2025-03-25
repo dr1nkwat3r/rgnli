@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import ReactGA from 'react-ga4';
 import './App.scss';
 import OutIcon from './diagonal-arrow.svg';
 import RightArrow from './right-arrow.svg';
@@ -104,7 +105,9 @@ const ProjectCard = ({ title, year, role, description, media, url, awards, award
                       <Link to={url}>{title}</Link>
                     ) : (<><a href={url} target='_blank'>{title} <img src={OutIcon} alt='external link' className='out-icon' width="20" height="20" /></a></> ) }</h2> */}
                     
-                    <h2>{url ? (hasProjectPage ? (<Link to={url}>{title}</Link>) : (<><a href={url} target='_blank' rel="noopener noreferrer">{title} <img src={OutIcon} alt='external link' className='out-icon' width="20" height="20" /></a></> )) : (<>{title}</>)}</h2>
+                    <h2>{url ? (hasProjectPage ? 
+                      (<Link to={url} onClick={() => ReactGA.event({category: 'Project', action: 'click', label: title,})}>{title}</Link>) : 
+                      (<><a href={url} target='_blank' rel="noopener noreferrer" onClick={() => ReactGA.event({category: 'Project', action: 'click', label: title,})}>{title} <img src={OutIcon} alt='external link' className='out-icon' width="20" height="20" /></a></> )) : (<>{title}</>)}</h2>
                     <p><span className='card__role'>{role}</span> ({year})</p>
                 </div>
 
