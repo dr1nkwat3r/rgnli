@@ -12,7 +12,8 @@ const Carousel = () => {
   return (
     <div className="carousel-container">
       <div className='container'>
-        <h3><Link to={'/editorial-illustrations'}>Editorial Illustrations <img src={RightArrow2} className='right-arrow' /></Link></h3>
+        <hr/>
+        <h3><Link to={'/editorial-illustrations'}>Editorial Illustrations &nbsp; <img src={RightArrow2} className='right-arrow' /></Link></h3>
       {/* <span>Various editorial illustrations done for WhyNot</span> */}
       </div>
       <div className="carousel gallery-gradient">
@@ -30,7 +31,7 @@ const Carousel = () => {
         </div>)
         ))}
 
-        <div className='carousel-container__more'><Link to={'/editorial-illustrations'}><img src={RightArrow2} className='right-arrow' /></Link></div>
+        <div className='carousel-container__more'><Link to={'/editorial-illustrations'}>More &nbsp;<img src={RightArrow2} className='right-arrow' /></Link></div>
         {/* <div><img src={path + '/test-2.jpeg'}/>xxx</div>
         <div><img src={path + '/test-3.jpeg'} />bbb</div>
         <div><img src={path + '/vertical.png'} />ccc</div>
@@ -39,6 +40,7 @@ const Carousel = () => {
         <div><img src={path + '/test-3.jpeg'} />xx</div>
         <div><img src={path + '/vertical.png'} />xx</div> */}
       </div>
+      <hr/>
     </div>
   );
 };

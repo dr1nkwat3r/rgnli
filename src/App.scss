@@ -221,7 +221,7 @@ footer {
   width:100%;
   margin: 4em 0;
   // background-color: rgba(255, 255, 0, 0.302);
-  padding: 10px 20px 10px 10px;
+  padding: 10px 20px 12px 10px;
   border-radius: 20px;
 
   @media (max-width:768px) {
@@ -232,7 +232,9 @@ footer {
   }
 
   &:hover {
-    background-color: rgb(244, 244, 244);
+    background-color: rgba(237, 237, 253, 0.15);
+    border: 0.5px solid rgb(220, 220, 220);
+    box-shadow: 0.5px 0.5px 4px rgba(69, 57, 172, 0.2);
     transition: all 0.2s;
 
     .gallery-gradient:after {
@@ -504,7 +506,7 @@ footer {
 .right-arrow {
   filter:invert(14%) sepia(100%) saturate(4449%) hue-rotate(243deg) brightness(78%) contrast(152%);
   transform: translate(-2px, 2px);
-  opacity: 0.7;
+  opacity: 1;
   width: 12px;
   height: 12px;
 
@@ -562,14 +564,22 @@ footer {
 
   &__more {
     white-space: nowrap;
+    background-color: white;
+    border-radius: 16px;
+    border:1px solid rgba(0, 0, 105, 0.4);
+    padding: 3px 6px;
+
+    @media (max-width:768px) {
+      display: none;
+    }
 
     a {
       border-bottom: none;
 
       &:hover {
         img {
-          transform: translate(6px, 0px);
-          transition: all 0.4s ease-out;
+          transform: translate(4px, 0px);
+          transition: all 0.2s ease-out;
         }
       }
     }
@@ -680,6 +690,17 @@ footer {
     padding: 0 10px;
   }
   
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+  @media (max-width:768px) {
+    display: none;
+  }
 }
 
 
