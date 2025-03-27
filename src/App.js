@@ -20,11 +20,14 @@ function App() {
 
   const pageRoutes = ['/whynot-website-redesign', '/editorial-illustrations'];
 
-  // ReactGA.send({
-  //   hitType: "pageview",
-  //   page:"/",
-  //   title:"homepage",
-  // });
+
+  const handleClick = (link) => {
+    ReactGA.event({
+      category: 'contact',
+      action: 'click',
+      label: 'link',
+    });
+  };
 
   const Header = () => {
     const location = useLocation();
@@ -50,14 +53,6 @@ function App() {
         title: "homepage",
       });
     }, []);
-
-  const handleClick = (link) => {
-    ReactGA.event({
-      category: 'contact',
-      action: 'click',
-      label: 'contact',
-    });
-  };
 
 
   useEffect(() => {

@@ -151,6 +151,22 @@
         "titleCn": "当堕胎权案进入中国自由派语境：在“法治胜利”的叙事中被杀死"
     },
     {
+        "title": "Behind the Scenes in the Chinese Communist Party-Controlled Media",
+        "year": 2020,
+        "media": "/collages/2020-cover-xi.mp4",
+        "type": "video",
+        "carousel": false,
+        "articleLink": "https://stories.wainao.me/---behind-the-scenes-in-the-chinese-communist-party-controlled-media---/index.html"
+    },
+    {
+        "title": "The Truth Isn't Dead: You Just Don't Believe It Anymore",
+        "year": 2020,
+        "media": "/collages/2020-truth-cover.mp4",
+        "type": "video",
+        "carousel": false,
+        "articleLink": "https://stories.wainao.me/---the-truth-isn-t-dead---you-just-don-t-believe-it-any-more---/index.html"
+    },
+    {
         "title": "Starting from the 20th National Congress: Looking Back at 40 Years of 'Reform'",
         "year": 2022,
         "media": "/collages/22-155-20thnationalcongress-cover.jpg",
@@ -176,5 +192,21 @@
         "carousel": false,
         "articleLink": "https://www.wainao.me/wainao-reads/animal-crossing-removal-09092020/",
         "titleCn": "我在动森中找到逃离现实的自由，却终日担忧随时下架"
+    },
+    {
+        "title": "Evolving Idealism: Three Decades of Change in How China's Universities Educate Journalists",
+        "year": 2020,
+        "media": "/collages/2020-students-cover.mp4",
+        "type": "video",
+        "carousel": false,
+        "articleLink": "https://stories.wainao.me/the-changes-of-idealism--/index.html"
+    },
+    {
+        "title": "China Media Watch",
+        "year": 2020,
+        "media": "/collages/2020-mediawatch-cover.mp4",
+        "type": "video",
+        "carousel": false,
+        "articleLink": "https://www.wainao.me/wainao-reads/china-media-watch-en/"
     }
 ]

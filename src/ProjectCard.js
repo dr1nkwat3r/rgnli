@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import './App.scss';
 import OutIcon from './diagonal-arrow.svg';
-import RightArrow from './right-arrow.svg';
+import RightArrow from './right-arrow-2.svg';
 
 const path = process.env.PUBLIC_URL;
 
