@@ -238,6 +238,10 @@ footer {
     .gallery-gradient:after {
       background: linear-gradient(to left, rgba(244, 244, 244, 0.315), transparent);
     }
+
+    .arrow {
+      opacity: 1;
+    }
   }
 
   &__image-container {
@@ -269,6 +273,7 @@ footer {
   }
 
   .arrow {
+    opacity: 0.5;
     position: absolute;
     top:98%;
     right:15px;
@@ -499,7 +504,7 @@ footer {
 .right-arrow {
   filter:invert(14%) sepia(100%) saturate(4449%) hue-rotate(243deg) brightness(78%) contrast(152%);
   transform: translate(-2px, 2px);
-  opacity: 0.5;
+  opacity: 0.7;
   width: 12px;
   height: 12px;
 
