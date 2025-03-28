@@ -26,10 +26,6 @@ const ProjectCard = ({ title, year, role, description, media, url, awards, award
       if (!scrollContainerRef.current) return;
       const container = scrollContainerRef.current;
       const scrollAmount = container.clientWidth;
-      // container.scrollTo({ 
-      //   left: container.scrollLeft + scrollAmount, 
-      //   behavior: "smooth" 
-      // });
       container.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   
