@@ -42,7 +42,7 @@ h1 {
     margin-bottom: 0px;
     line-height: 1.3;
     // font-size: 14vw;
-    font-size: clamp(20px, 14vw, 250px);
+    font-size: clamp(20px, 14vw, 450px);
     text-indent: -0.5rem;
     // border: 1px solid red;
 
@@ -78,7 +78,7 @@ h1 {
     position: sticky;
     top: 0;
     // padding-bottom: 400px;
-    min-height: 90vh;
+    max-height: 40vh;
     z-index: 5;
     isolation: isolate;
     // border: 1px solid orange;
@@ -92,10 +92,11 @@ h1 {
 .sticky-scroll {
     flex-grow: 1;
     flex-direction: column;
-    height: 200vh;
+    height: 60vh;
+    // border:1px solid purple;
 
     @media (max-width:768px) {
-        height:100vh;
+        height:106vh;
     }
 }
 
@@ -148,6 +149,7 @@ h1 {
         @media (max-width:768px) {
             padding-left:3%;
             padding-right: 3%;
+            height: 85vh;
         }
     }
 
