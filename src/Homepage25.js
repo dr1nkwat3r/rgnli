@@ -5,6 +5,7 @@ import './homepage25.scss';
 
 import EditorialIllus from './pages/EditorialIllus25';
 import ProjectCard25 from './ProjectCard25';
+import WhynotWebsite from './pages/WhynotWebsite25';
 
 const TRACKING_ID = 'G-EKSDMFT1B3';
 ReactGA.initialize(TRACKING_ID);
@@ -61,32 +62,37 @@ const Homepage25 = () => {
                     <div className='sticky'>
                         <div className='header__container' ref={headerContainerRef} >
                                 <div className='header__top top1'>
-                                    <span>Digital Designer</span>
-                                    <span>Hello!</span>
+                                    <span className='headerspan'><NavLink to='/' className='top1__home'>Digital Designer</NavLink></span>
+                                    <span className='headerspan top1__hello'>Hello!</span>
                                 </div>
                                 <div className='header__top top2'>
-                                    <h1>REGINA</h1>
+                                    <h1><span>R</span><span>E</span><span>G</span><span>I</span><span>N</span><span>A</span></h1>
                                     <div className='header__contact'>
                                         <p><a href='mailto:rgnhli@gmail.com' target='_blank' onClick={() => handleClick("email")}>Email</a></p>
                                         <p><a href='https://www.linkedin.com/in/rgnli/' target='_blank' onClick={() => handleClick("linkedin")}>LinkedIn</a></p>
                                         <p><a href='https://docs.google.com/document/d/1nFUFd6_Xxsi_HMOw945I3pphHVzT_ZgPl9A_wIjA3YI/edit' target='_blank' onClick={() => handleClick("resume")}>Résumé</a></p>
                                     </div>
                                 </div>
-                                <h1 className='h1-small'>LI</h1>
+                                <h1 className='h1-small'><span>LI</span></h1>
                         </div>
                     </div>
                 
                     <div className='header__intro' style={{ marginTop: `${headerHeight + 140}px` }}>
-                        <div><p>I enjoy turning complex topics into visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories.</p></div>
-                        <NavLink to="/" className={({ isActive }) => isActive ? "nav active" : "nav"}>{({ isActive }) => (isActive ? "➼ Projects" : 'Projects')}</NavLink>
-                        <NavLink to="/editorial-illustrations" className={({ isActive }) => isActive ? "nav active" : "nav"}>{({ isActive }) => (isActive ? "➼ Editorial Illustrations" : "Editorial Illustrations")}</NavLink>
+                        <div><p>I enjoy turning complex topics into visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories.</p>
+                        
+                        </div>
+                        <div className='nav-container'>
+                            <NavLink to="/" className={({ isActive }) => isActive ? "nav active" : "nav"}>Projects</NavLink>
+                            <NavLink to="/editorial-illustrations" className={({ isActive }) => isActive ? "nav active" : "nav"}>Editorial illustrations</NavLink>
+                            
+                        </div>
                         <hr className='header__hr'/>
                     </div>
-    
 
                         <Routes>
                             <Route path="/" element={<ProjectCard25 />} />
                             <Route path="/editorial-illustrations" element={<EditorialIllus />} />
+                            <Route path="/whynot-website-redesign" element={<WhynotWebsite />} />
                         </Routes>
 
                         <footer>

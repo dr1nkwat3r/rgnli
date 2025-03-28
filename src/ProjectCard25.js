@@ -9,53 +9,55 @@ import RightArrow from './rightarrow.svg'
 const path = process.env.PUBLIC_URL;
 
 const ProjectCard25 = () => {
-  const [scrollRefs, setScrollRefs] = useState({});
-  const [isAtEnd, setIsAtEnd] = useState({});
-  
+  const scrollRefs = useRef([]);
+  const [hideArrow, setHideArrow] = useState({});
 
   const handleNext = (projectIndex) => {
-    const ref = scrollRefs[projectIndex];
-    if (!ref || !ref.current) return;
-
-    const container = ref.current;
+    const container = scrollRefs.current[projectIndex];
+    if (!container) return;
     const scrollAmount = container.clientWidth;
-    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-
-    setTimeout(() => checkScrollPosition(projectIndex), 500);
-    
-  }
-
-  const checkScrollPosition = (projectIndex) => {
-    const ref = scrollRefs[projectIndex];
-    if (!ref || !ref.current) return;
-  
-    const container = ref.current;
-    const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 1;
-    setIsAtEnd(prev => ({ ...prev, [projectIndex]: isAtEnd }));
+    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   };
 
   useEffect(() => {
-    // Create refs for each project's media scroll container
-    const refs = {};
-    projects.forEach((_, index) => {
-      refs[index] = React.createRef();
-    });
-    setScrollRefs(refs);
+    const handleScroll = (projectIndex) => {
+      const container = scrollRefs.current[projectIndex];
+      if (!container) return;
 
-    Object.entries(refs).forEach(([index, ref]) => {
-      if (ref.current) {
-        ref.current.addEventListener('scroll', () => checkScrollPosition(Number(index)));
+      const scrollWidth = container.scrollWidth;
+      const clientWidth = container.clientWidth;
+      const scrollLeft = container.scrollLeft;
+
+      if (scrollLeft + clientWidth >= scrollWidth - 100) {
+        setHideArrow((prev) => ({
+          ...prev,
+          [projectIndex]: true,
+        }));
+      } else {
+        setHideArrow((prev) => ({
+          ...prev,
+          [projectIndex]: false,
+        }));
+      }
+    };
+
+    projects.forEach((_, index) => {
+      const container = scrollRefs.current[index];
+      if (container) {
+        container.addEventListener('scroll', () => handleScroll(index));
+        handleScroll(index); // Initial check
       }
     });
 
     return () => {
-      Object.entries(refs).forEach(([index, ref]) => {
-        if (ref.current) {
-          ref.current.removeEventListener('scroll', () => checkScrollPosition(Number(index)));
+      projects.forEach((_, index) => {
+        const container = scrollRefs.current[index];
+        if (container) {
+          container.removeEventListener('scroll', () => handleScroll(index));
         }
-      });
+      })
     };
-  }, []);
+  }, [projects]);
 
 
   return (
@@ -67,16 +69,20 @@ const ProjectCard25 = () => {
           
           {/* Left Column: Media Scroll */}
           <div className="project__image-container">
-            <div className="image-scroll" ref={scrollRefs[index]}>
+            <div 
+              className={project.media.length > 1 ? 'image-scroll' : ''} 
+              ref={(el) => (scrollRefs.current[index] = el)}
+              style={project.media.length === 1 ? { width: '99%', height: '100%', objectFit:'cover', verticalAlign:'middle' } : {}}
+              >
               {project.media.map((item, i) => (
                   <div
                     key={i}
                     className="image-scroll__item"
-                    style={{
-                      width: project.media.length === 1 ? '100%' : 'auto', 
-                      height: project.media.length === 1 ? '100%' : 'auto',
-                      overflow: project.media.length === 1 ? 'hidden' : 'auto'
-                    }}
+                    // style={{
+                    //   width: project.media.length === 1 ? '100%' : 'auto', 
+                    //   height: project.media.length === 1 ? '100%' : 'auto',
+                    //   overflow: project.media.length === 1 ? 'hidden' : 'auto'
+                    // }}
                       >
                     {item.type === 'image' ? (
                       <img
@@ -110,11 +116,14 @@ const ProjectCard25 = () => {
               </button>
             )} */}
 
-            {project.media.length > 1 && !isAtEnd[index] && (
-              <button className="next-btn" onClick={() => handleNext(index)}>
-                <img src={RightArrow} alt='slide right' className='right-arrow' />
-              </button>
-            )}
+{project.media.length > 1 && !hideArrow[index] && (
+                <button
+                  className="next-btn"
+                  onClick={() => handleNext(index)}
+                >
+                  <img src={RightArrow} alt="slide right" className="right-arrow" />
+                </button>
+              )}
 
           </div>
 
@@ -142,10 +151,7 @@ const ProjectCard25 = () => {
       ))}
 
       </div>
-      
-      {/* <div style={{height:'100vh', backgroundColor:'gray'}}>Projects25
 
-      </div> */}
     </div>
   )
 }
