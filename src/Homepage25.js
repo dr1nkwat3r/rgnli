@@ -16,11 +16,11 @@ const Homepage25 = () => {
     const headerContainerRef = useRef(null);
     const [headerHeight, setHeaderHeight] = useState(0);
 
-    const handleClick = (link) => {
+    const handleClick = (platform) => {
         ReactGA.event({
-          category: 'contact',
+          category: 'Social Links',
           action: 'click',
-          label: 'link',
+          label: platform,
         });
       };
 
@@ -28,7 +28,7 @@ const Homepage25 = () => {
         ReactGA.send({
             hitType: "pageview",
             page: "/",
-            title: "homepage",
+            title: "Homepage",
         });
         }, []);
 
@@ -83,7 +83,7 @@ const Homepage25 = () => {
                         </div>
                         <div className='nav-container'>
                             <NavLink to="/" className={({ isActive }) => isActive ? "nav active" : "nav"}>Projects</NavLink>
-                            <NavLink to="/editorial-illustrations" className={({ isActive }) => isActive ? "nav active" : "nav"}>Editorial illustrations</NavLink>
+                            <NavLink to="/editorial-illustrations" className={({ isActive }) => isActive ? "nav active" : "nav"} onClick={() => ReactGA.event({category: 'Project', action: 'click', label: 'Editorial Illustrations',})}>Editorial illustrations</NavLink>
                             
                         </div>
                         <hr className='header__hr'/>
