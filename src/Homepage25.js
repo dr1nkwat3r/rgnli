@@ -70,7 +70,7 @@ const Homepage25 = () => {
                                     <div className='header__contact'>
                                         <p><a href='mailto:rgnhli@gmail.com' target='_blank' onClick={() => handleClick("email")}>Email</a></p>
                                         <p><a href='https://www.linkedin.com/in/rgnli/' target='_blank' onClick={() => handleClick("linkedin")}>LinkedIn</a></p>
-                                        <p><a href='https://docs.google.com/document/d/1nFUFd6_Xxsi_HMOw945I3pphHVzT_ZgPl9A_wIjA3YI/edit' target='_blank' onClick={() => handleClick("resume")}>Résumé</a></p>
+                                        <p><a href='https://docs.google.com/document/d/19JJ22PijGIhlqx6l2nFZDWHT2bSPYSFy798pO1TfGcM/edit?usp=sharing' target='_blank' onClick={() => handleClick("resume")}>Résumé</a></p>
                                     </div>
                                 </div>
                                 <h1 className='h1-small'><span>LI</span></h1>
