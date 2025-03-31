@@ -1,60 +1,64 @@
 [
     {
-        "title": "Indiscriminate Attacks in China from 2000 to 2024—The Disillusioned Middle-Aged, Social Grievances, and the Death Penalty",
+        "title": "Visualizing Violence: Data-Driven Report on Indiscriminate Attacks in China",
         "year": 2025,
-        "role": "Design 📐 Development 👾 Data Visualization 📈",
-        "description": "With the surge of random, indiscriminate mass attack incidents that occurred across China in 2024, this report examines the current Chinese society through data, exploring the underlying societal trends and potential contributing factors, and providing insights into the broader social dynamics and conditions shaping China.\n\n(Original Title: “失意的中年人”，社会怨气，以及“火速办案”和死刑——2000到2024，我们从中国的无差别袭击事件看到什么？)",
-        "media": [ { "type": "image", "src": "/indiscriminate/indiscriminate-2.jpg" }, { "type": "image", "src": "/indiscriminate/indiscriminate-3.jpg" }, { "type": "video", "src": "/indiscriminate/indiscriminate-1.mp4" }  ],
-        "url": "https://www.wainao.me/wainao-reads/china-indiscriminate-attacks-social-grievances-frustrated-men-03212025/"
+        "role": "Design 📐  Development 👾  Data Visualization 📈",
+        "description": "With the surge of random, indiscriminate mass attack incidents that occurred across China in 2024, this report examines the current Chinese society through data, exploring the underlying societal trends and potential contributing factors, and providing insights into the broader social dynamics and conditions shaping China.\n\n(Title: Random, Indiscriminate Attacks in China from 2000 to 2024—The Disillusioned Middle-Aged, Social Grievances, and the Death Penalty)",
+        "media": [ { "type": "image", "src": "/indiscriminate/indiscriminate-2.jpg" } , { "type": "image", "src": "/indiscriminate/indiscriminate-3.jpg" }, { "type": "video", "src": "/indiscriminate/indiscriminate-1.mp4" } ],
+        "url": "https://www.wainao.me/wainao-reads/china-indiscriminate-attacks-social-grievances-frustrated-men-03212025/",
+        "cntitle": "(Original Title: “失意的中年人”，社会怨气，以及“火速办案”和死刑——2000到2024，我们从中国的无差别袭击事件看到什么？)"
     },
     {
-        "title": "WhyNot Website Redesign",
+        "title": "Digital News Magazine Website Design",
         "year": 2024,
-        "role": "UX 🔮 Design 📐",
-        "description": "Complete redesign of the WhyNot website to improve overall user experience, site performance, and streamline visual identity to create a clearer, more engaging, and cohesive brand presence.",
+        "role": "UX 🔮  Design 📐",
+        "description": "Enhancing user experience and visual cohesion for a news platform. A complete website redesign to improve usability, site performance, and streamline visual identity through a clearer, more engaging, and cohesive brand experience.",
         "media": [{ "type": "image", "src": "/wainao-redesign/wainao-redesign-1.jpg" }, { "type": "image", "src": "/wainao-redesign/wainao-redesign-2.jpg" }],
         "url": "/whynot-website-redesign",
-        "hasProjectPage": true
+        "hasprojectpage": true
     },
     {
-        "title": "Lives Changed by Gold: Where Are China's Olympic Champions Now?",
-        "year": 2024,
-        "role": "Design 📐 Development 👾 Data Visualization 📈",
-        "description": "This data report delves into the history of China's Olympic gold medalists to look at how winning on the world stage may have changed the athletes' individual lives. How do the immense pressure and expectations placed on these Chinese athletes by the country, its national system, and the Chinese public influence sports careers in China?\n\n(Original Title: 因金牌而改变一生 中国奥运冠军今何在？)",
-        "media": [{ "type": "image", "src": "/olympicgold/olympicgold-1.jpg" }, { "type": "video", "src": "/olympicgold/olympicgold-2.mp4" }, { "type": "video", "src": "/olympicgold/olympicgold-3.mp4" }, { "type": "image", "src": "/olympicgold/olympicgold-4.jpg" } ],
-        "url": "https://www.wainao.me/wainao-reads/chinese-olympic-gold-champions-now-08122024"
+        "title": "The White Paper Protests:  An Interactive Timeline",
+        "year": 2023,
+        "role": "Design 📐 Development 👾",
+        "description": "This interactive timeline commemorates the first anniversary of the White Paper Movement, a pivotal moment in recent Chinese history that was swiftly erased from official narratives. \n\n(Title: The First Anniversary of the White Paper Protest: The Flame is Gone but the Heat Remains)",
+        "media": [{"type": "image", "src" : "/a4anniv/a4anniv-1.jpg"}, {"type":"video", "src":"/a4anniv/a4anniv-2.mp4"} ],
+        "url": "https://www.wainao.me/wainao-reads/fea-one-year-anniversary-of-A4-Protest-EN-04122024"
     },
     {
         "title": "Instagram Template Design",
         "year": 2024,
         "role": "Design 📐",
-        "description": "Refreshing WhyNot's visual identity on Instagram alongside the launch of the website revamp. I designed Instagram templates for the social media team. The goal was to create an easy-to-use system that reinforces the WhyNot brand while maintaining focus on the journalistic content. The templates ensure consistency, clarity, and brand cohesion.",
+        "description": "Refreshing WhyNot's visual identity on Instagram alongside the website launch. I designed a flexible template system for the social media team. The goal was to create an easy-to-use system that reinforces the WhyNot brand while maintaining focus on the journalistic content. The templates ensure consistency, clarity, and brand cohesion.",
         "media": [{ "type": "image", "src": "/instagram-design/instagram-template-1.jpg" }]
     },
+    
     {
-        "title": "The First Anniversary of the White Paper Protest: The Flame is Gone but the Heat Remains",
-        "year": 2023,
-        "role": "Design 📐 Development 👾",
-        "description": "This interactive timeline commemorates the first anniversary of the White Paper Movement, a pivotal moment in recent Chinese history that was swiftly erased from official narratives. ",
-        "media": [{"type": "image", "src" : "/a4anniv/a4anniv-1.jpg"}, {"type":"video", "src":"/a4anniv/a4anniv-2.mp4"} ],
-        "url": "https://www.wainao.me/wainao-reads/fea-one-year-anniversary-of-A4-Protest-EN-04122024"
+        "title": "Gold and Beyond: Interactive Data Report on China's Olympic Champions",
+        "year": 2024,
+        "role": "Design 📐 Development 👾 Data Visualization 📈",
+        "description": "This data report delves into the history of China's Olympic gold medalists to look at how winning on the world stage may have changed the athletes' individual lives. How do the immense pressure and expectations placed on these Chinese athletes by the country, its national system, and the Chinese public influence sports careers in China?\n\n(Title: Lives Changed by Gold: Where Are China's Olympic Champions Now?)",
+        "media": [{ "type": "image", "src": "/olympicgold/olympicgold-1.jpg" }, { "type": "video", "src": "/video-test.mp4"}, { "type": "image", "src": "/test-2.jpeg" } ],
+        "url": "https://www.wainao.me/wainao-reads/chinese-olympic-gold-champions-now-08122024",
+        "cntitle": "因金牌而改变一生 中国奥运冠军今何在？"
     },
     {
-        "title": "Wearing Hanfu in Taiwan: Our Identity Beyond China's Official Hanfu Narrative",
+        "title": "Redefining Hanfu: Dress-Up Doll Game",
         "year": 2024,
-        "role": "Design 📐 Development 👾",
-        "description": "This article features an interactive dress-up doll game that showcases the diversity of Hanfu fashion and the versatility and creativity of contemporary styling. The story looks at Taiwanese Hanfu enthusiasts and their thoughts on the intersection of politics and identity within this community and the broader cultural and political significance of Hanfu in Taiwan. \n\n(Original Title: 与谁同袍？我在台湾穿汉服：中国官方汉服叙事之外，我们的身份认同)",
-        "media": [{"type":"video", "src":"/hanfu/hanfu-1.mp4"}, {"type" : "video", "src":"/hanfu/hanfu-2.mp4"}],
-        "url": "https://www.wainao.me/wainao-reads/hanfu-in-taiwan-02122024"
+        "role": "Design 📐, Development 👾",
+        "description": "This article features an interactive dress-up doll game that showcases the diversity of Hanfu fashion and the versatility and creativity of contemporary styling. The story looks at Taiwanese Hanfu enthusiasts and their thoughts on the intersection of politics and identity within this community and the broader cultural and political significance of Hanfu in Taiwan. \n\n",
+        "media": [{"type":"video", "src":"/hanfu/hanfu-1.mp4"}, {"type":"video", "src":"/hanfu/hanfu-2.mp4"}],
+        "url": "https://www.wainao.me/wainao-reads/hanfu-in-taiwan-02122024",
+        "cntitle": "(Original Title: 与谁同袍？我在台湾穿汉服：中国官方汉服叙事之外，我们的身份认同)"
     },
     {
         "title": "What do 355 Chinese and Foreign War Films Tell Us?",
         "year": 2023,
         "role": "Design 📐",
-        "description": "This data report examines Chinese war fims' struggles at the international box offices. Analyzing war-themed movies released between 2010 and 2022, my team looked at the complex dynamics between rising nationalism in China and the evolving portrayal of China's \"main melody\" ideology.",
-        "media": [{"type":"video", "src":"/warfilm.mp4"}, {"type":"image", "src":"/warfilm-3.jpg"}],
+        "description": "This data report examines Chinese war films' struggles at the international box offices. Analyzing war-themed movies released between 2010 and 2022, my team looked at the complex dynamics between rising nationalism in China and the evolving portrayal of China's \"main melody\" ideology. ",
+        "media": [{"type":"video", "src":"/warfilm.mp4"}, {"type":"image", "src":"/warfilm-2.jpg"}],
         "url": "https://www.wainao.me/wainao-reads/fea-data-visualisation-of-war-movies-en-03242023",
-        "awards": ["Online Journalism Awards - Excellence in Visual Design Storytelling", "AAJA Awards - Online/Digital Journalism, Data"],
+        "awards": ["Online Journalism Awards - Excellence in Visual Digital Storytelling", "AAJA Awards - Online/Digital Journalism, Data"],
         "awardLinks": ["https://awards.journalists.org/entries/what-do-355-chinese-and-foreign-war-films-tell-us/", "https://awards.aaja.org/2024-journalism-excellence-awards/excellence-in-online-digital-journalism-data"]
     }
 ]

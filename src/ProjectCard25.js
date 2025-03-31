@@ -129,7 +129,7 @@ const ProjectCard25 = () => {
 
           {/* Right Column: Project Details */}
           <div className="project__details">
-            <h2 className='project__title'>{project.url ? (project.hasProjectPage ? 
+            <h2 className='project__title'>{project.url ? (project.hasprojectpage ? 
               (<Link to={project.url} onClick={() => ReactGA.event({category: 'Project', action: 'click', label: project.title,})}>{project.title}</Link>) : 
               (<><a href={project.url} target='_blank' rel="noopener noreferrer" onClick={() => ReactGA.event({category: 'Project', action: 'click', label: project.title,})}>{project.title} <img src={OutIcon} alt='external link' className='out-icon' /></a></> )) : (<>{project.title}</>)}</h2>
             <p><span className='project__role'>{project.role}</span> ({project.year})</p>

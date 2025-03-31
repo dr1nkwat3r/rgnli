@@ -115,7 +115,7 @@ h1 {
     &__home {
         text-decoration: none;
         color: white;
-        transition: all 0.2s;
+        transition: all 0.1s;
         cursor: pointer;
 
         &:hover {
@@ -418,7 +418,7 @@ h1 {
     &__title {
         font-weight: 800;
         font-style: italic;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 1.5;
         // padding-bottom: 8px;
         
@@ -436,9 +436,13 @@ h1 {
                     }
                 }
         }
+        
+        @media (max-width:768px) {
+            font-size: 1.2rem;;
+        }
 
         @media (min-width:2000px) {
-            font-size: 1.35rem;
+            font-size: 1.6rem;
         }
     }
 
