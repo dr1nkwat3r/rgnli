@@ -24,7 +24,7 @@ function App() {
   const handleClick = (link) => {
     ReactGA.event({
       category: 'contact',
-      action: 'click',
+      action: 'click - contact',
       label: 'link',
     });
   };

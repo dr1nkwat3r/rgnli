@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { BrowserRouter, Router, Routes, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Router, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import './homepage25.scss';
 
@@ -16,10 +16,12 @@ const Homepage25 = () => {
     const headerContainerRef = useRef(null);
     const [headerHeight, setHeaderHeight] = useState(0);
 
+    const [isHomepage, setIsHomepage] = useState(true);
+
     const handleClick = (platform) => {
         ReactGA.event({
           category: 'Social Links',
-          action: 'click',
+          action: 'click - social',
           label: platform,
         });
       };
@@ -78,9 +80,11 @@ const Homepage25 = () => {
                     </div>
                 
                     <div className='header__intro' style={{ marginTop: `${headerHeight + 140}px` }}>
-                        <div><p>I enjoy turning complex topics into visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories.</p>
+
+                        <RouteChecker setIsHomepage={setIsHomepage} headerHeight={headerHeight} />
+                        { isHomepage && (<div><p>I enjoy turning complex topics into visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories.</p>
+                        </div>) }
                         
-                        </div>
                         <div className='nav-container'>
                             <NavLink to="/" className={({ isActive }) => isActive ? "nav active" : "nav"}>Projects</NavLink>
                             <NavLink to="/editorial-illustrations" className={({ isActive }) => isActive ? "nav active" : "nav"} onClick={() => ReactGA.event({category: 'Project', action: 'click', label: 'Editorial Illustrations',})}>Editorial illustrations</NavLink>
@@ -117,7 +121,29 @@ const Homepage25 = () => {
         </div>
         
     </BrowserRouter>
-  )
-}
+  );
+};
+
+const RouteChecker = ({ setIsHomepage, headerHeight }) => {
+    const location = useLocation();
+    
+    useEffect(() => {
+        const isHomepage = location.pathname === '/';
+        setIsHomepage(isHomepage);
+        
+        const noScrollRoutes = ['/', '/editorial-illustrations'];
+        
+        if (!noScrollRoutes.includes(location.pathname)) {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: headerHeight + 100, 
+                    behavior: 'instant'
+                });
+            }, 100);
+        }
+    }, [location, setIsHomepage, headerHeight]);
+    
+    return null;
+};
 
 export default Homepage25
