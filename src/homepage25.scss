@@ -3,7 +3,7 @@
 :root {
     --darkblue: #000069;
     --lightblue: #8EA9FF;
-    --offwhite: #F3F4F2;
+    --offwhite: #fefefe;
     --gray: #575757;
 
     font-size: 16px;
@@ -29,11 +29,10 @@ body {
 .homepage25 {
     background-color: var(--darkblue);
     min-height: 100vh;
-    padding: 0 5%;
+    // padding: 0 5%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    min-height: 100vh;
 
     @media (max-width:768px) {
         padding: 0 3%;
@@ -120,16 +119,18 @@ h1 {
 
         &:hover {
             // font-style: normal;
-            letter-spacing: 4px;
-            border-bottom: 2px solid var(--lightblue);
+            // letter-spacing: 4px;
+            color: var(--lightblue);
+            font-weight: 900;
+            // border-bottom: 2px solid var(--lightblue);
         }
     }
 
     &__hello {
         color: white;
-        &:hover {
-            color: var(--lightblue);
-        }
+        // &:hover {
+        //     color: var(--lightblue);
+        // }
     }
 }
 
@@ -151,8 +152,9 @@ h1 {
         width: 97%;
         margin: 0 auto;
         max-width: 100vw;
-        padding-top: 6%;
+        // padding-top: 6%;
         min-height: 40px;
+        padding: 6% 5% 0% 5%;
         // border: 1px solid green;
 
         @media (max-width:768px) {
@@ -221,6 +223,7 @@ h1 {
         z-index: 10;
         padding: 10px 22px;
         position: relative;
+        margin: 0 2%;
         // margin-top: calc(100% - 50vh); 
 
         @media (max-width:768px) {
@@ -261,6 +264,7 @@ h1 {
 .nav-container {
     padding-bottom: 0px;
     padding-top:10px;
+    
     // border: 1px solid pink;
 
     @media (max-width:768px) {
@@ -327,6 +331,7 @@ h1 {
     &__container {
         display: flex;
         flex-direction: column;
+        margin: 0 2%;
         // gap: 20px;
     }
 
@@ -348,7 +353,7 @@ h1 {
         transition: all 0.3s ease;
     
         &:hover {
-            border-radius: 45px;
+            border-radius: 35px;
 
             .project__title a {
                 border-bottom: 2px solid var(--lightblue);
@@ -459,6 +464,7 @@ h1 {
     &__description {
         white-space: pre-line;
         margin-top: auto;
+        line-height: 1.4;
     }
 
     &__award {
@@ -623,6 +629,10 @@ h1 {
     height: 50px;
 }
 
+.detail-page-padding {
+    padding: 0 3% 4% 3%;
+}
+
 
 .detail-page {
     z-index: 10;
@@ -630,11 +640,12 @@ h1 {
     background-color: var(--offwhite);
     color: black;
     // background-color: #1a1b1f;
-    padding: 0 3% 4% 3%;
+    // padding: 0 3% 4% 3%;
     border-style: none solid solid solid;
     border-color: var(--darkblue);
     border-width: 3px;
     min-height: 100vh;
+    margin: 0 2%;
 
     img {
         display: block;
@@ -649,9 +660,90 @@ h1 {
 }
 
 .page {
+    &__container {
+        padding: 0 3% 2% 3%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:40px;
+        // border:1px solid green;
+        line-height: 1.6;
+
+        h3 {
+            font-size: 1rem; 
+        }
+
+        @media (max-width:768px) {
+            grid-template-columns: 1fr;
+            gap:20px;
+
+            div:nth-child(4) {
+                // border: 1px solid red;
+                grid-row: 4;
+            }
+        }
+    }
+
+    &__darkcontainer {
+        background-color: #414246;
+        color:white;
+        padding: 3% 3% 2% 3%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        div {
+            padding: 2% 15%;
+            // border:1px solid pink;
+
+            @media (max-width:768px) {
+                padding: 0% 5%;
+            }
+        }
+
+        p {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+
+    &__thirds {
+        grid-row: 3;
+
+        p {
+            line-height: 1.6;
+        }
+    }
+
+    &__horizontalscroll {
+        padding: 3% 3% 2% 3%;
+        display: flex;
+        gap:2.8%;
+        overflow: auto;
+        // border:1px solid orange;
+        
+        div {
+            min-width: 570px;
+            text-align: center;
+            font-style: italic;
+
+            @media (max-width:768px) {
+                min-width: 300px;
+            }
+        }
+
+        img {
+            border:0.5px solid #919297;
+        }
+    }
+    
+
     &__title {
         font-size: 2.1rem;
         font-style: italic;
+        grid-column: 1 / span 2;
 
         @media (max-width:768px) {
             font-size: 1.4rem;
@@ -660,7 +752,9 @@ h1 {
 
     &__text {
         line-height: 1.7;
-        max-width: 700px;
+        // max-width: 700px;
+
+        grid-column: 1 / span 2;
 
         @media (max-width:768px) {
             font-size: 0.95rem;    
@@ -678,11 +772,43 @@ h1 {
             border-bottom: 0.5px dotted var(--darkblue);
         }
     }
+
+    &__solution {
+        font-size: 1.8rem;
+        line-height: 1.4;
+
+        @media (max-width:768px) {
+            font-size: 1.4rem;;
+        }
+    }
+
+    &__finding {
+        background-color: #FFE3AA;
+        padding: 6% 9%;
+        border-radius: 8px;
+        font-size: 0.88rem;
+
+        p {
+            margin-bottom:0px;
+            margin-top: 8px;
+        }
+
+        span {
+            display: block;
+            color: #E7A900;
+            font-weight: bold;
+            // padding-bottom: 4px;
+        }
+
+        @media (max-width:768px) {
+            padding: 5.5% 10%;
+        }
+    }
      
     &__intro {
         font-size:1.35rem;
         line-height: 1.6;
-        padding-bottom: 10%;
+        padding-bottom:5%;
 
         @media (max-width:768px) {
             font-size: 1.15rem;
@@ -751,6 +877,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);;
     font-size: 0.85rem;
     line-height: 1.5;
+    margin: 0 5%;
   
     div {
       &:nth-child(1) {

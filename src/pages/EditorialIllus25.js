@@ -6,7 +6,7 @@ const path = process.env.PUBLIC_URL;
 
 const EditorialIllus = () => {
   return (
-    <div className='detail-page'>
+    <div className='detail-page detail-page-padding'>
         <div className='detail-padding' />
         {/* <div className='container'> */}
             {/* <div><h2 className='project__title'>Editorial Illustrations</h2></div> */}
