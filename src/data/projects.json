@@ -38,7 +38,7 @@
         "year": 2024,
         "role": "Design 📐 &nbsp;&nbsp; Development 👾 &nbsp;&nbsp; Data Visualization 📈",
         "description": "This data report delves into the history of China's Olympic gold medalists to look at how winning on the world stage may have changed the athletes' individual lives. How do the immense pressure and expectations placed on these Chinese athletes by the country, its national system, and the Chinese public influence sports careers in China?\n\n(Title: Lives Changed by Gold: Where Are China's Olympic Champions Now?)",
-        "media": [{ "type": "image", "src": "/olympicgold/olympicgold-1.jpg" }, { "type": "video", "src": "/video-test.mp4"}, { "type": "image", "src": "/test-2.jpeg" } ],
+        "media": [{ "type": "image", "src": "/olympicgold/olympicgold-1.jpg" }, { "type": "video", "src": "/olympicgold/olympicgold-2.mp4" }],
         "url": "https://www.wainao.me/wainao-reads/chinese-olympic-gold-champions-now-08122024",
         "cntitle": "因金牌而改变一生 中国奥运冠军今何在？"
     },
