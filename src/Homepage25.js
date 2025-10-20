@@ -72,7 +72,7 @@ const Homepage25 = () => {
                                     <div className='header__contact'>
                                         <p><a href='mailto:rgnhli@gmail.com' target='_blank' onClick={() => handleClick("email")}>Email</a></p>
                                         <p><a href='https://www.linkedin.com/in/rgnli/' target='_blank' onClick={() => handleClick("linkedin")}>LinkedIn</a></p>
-                                        <p><a href='https://docs.google.com/document/d/19JJ22PijGIhlqx6l2nFZDWHT2bSPYSFy798pO1TfGcM/edit?usp=sharing' target='_blank' onClick={() => handleClick("resume")}>Résumé</a></p>
+                                        <p><a href='https://docs.google.com/document/d/1ml1_4ZsLiDaRrXvTk1zU-q1xDBKDKXudOORi54jNG2g/edit?usp=sharing' target='_blank' onClick={() => handleClick("resume")}>Résumé</a></p>
                                     </div>
                                 </div>
                                 <h1 className='h1-small'><span>LI</span></h1>
@@ -82,8 +82,10 @@ const Homepage25 = () => {
                     <div className='header__intro' style={{ marginTop: `${headerHeight + 140}px` }}>
 
                         <RouteChecker setIsHomepage={setIsHomepage} headerHeight={headerHeight} />
-                        { isHomepage && (<div><p>I enjoy turning complex topics into visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories.</p>
+                        { isHomepage && (<div><p>Regina enjoys transforming complex topics into engaging visual narratives, blending design, code, and curiosity. She is currently a <span style={{ whiteSpace:'nowrap', fontWeight:'500' }}>Web Designer & Developer</span> at NASA's Goddard Space Flight Center, where she shapes projects from concept and design to code.</p>
                         </div>) }
+
+                        {/* I enjoy turning complex topics into visual experiences and informative graphics. Blending design, code, and curiosity to craft compelling visual stories. */}
                         
                         <div className='nav-container'>
                             <NavLink to="/" className={({ isActive }) => isActive ? "nav active" : "nav"}>Projects</NavLink>
