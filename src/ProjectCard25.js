@@ -46,6 +46,11 @@ const ProjectCard25 = () => {
       if (container) {
         container.addEventListener('scroll', () => handleScroll(index));
         handleScroll(index); // Initial check
+
+        const media = container.querySelectorAll("img, video");
+        media.forEach((el) =>
+          el.addEventListener("load", () => handleScroll(index), { once: true })
+        );
       }
     });
 
@@ -116,7 +121,7 @@ const ProjectCard25 = () => {
               </button>
             )} */}
 
-{project.media.length > 1 && !hideArrow[index] && (
+              {project.media.length > 1 && !hideArrow[index] && (
                 <button
                   className="next-btn"
                   onClick={() => handleNext(index)}
@@ -132,7 +137,7 @@ const ProjectCard25 = () => {
             <h2 className='project__title'>{project.url ? (project.hasprojectpage ? 
               (<Link to={project.url} onClick={() => ReactGA.event({category: 'Project', action: 'click', label: project.title,})}>{project.title}</Link>) : 
               (<><a href={project.url} target='_blank' rel="noopener noreferrer" onClick={() => ReactGA.event({category: 'Project', action: 'click - Project', label: project.title,})}>{project.title} <img src={OutIcon} alt='external link' className='out-icon' /></a></> )) : (<>{project.title}</>)}</h2>
-            <p><span className='project__role'><div style={{ display:"inline"}} dangerouslySetInnerHTML={{ __html: project.role }} /></span> ({project.year})</p>
+            <p><span className='project__role' dangerouslySetInnerHTML={{ __html: project.role }}></span> ({project.year})</p>
 
             {/* <p className="project__description">{project.description.split('\n').map((line, i) => (
               <span key={i}>
