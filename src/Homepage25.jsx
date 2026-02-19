@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { BrowserRouter, Router, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
+import { HashRouter, Router, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 import './homepage25.scss';
 
@@ -58,7 +58,7 @@ const Homepage25 = () => {
     }, []);
   
   return (
-    <BrowserRouter basename="/">
+    <HashRouter basename="/">
         <div className='homepage25'>
                 <div className='sticky-scroll'>
                     <div className='sticky'>
@@ -122,7 +122,7 @@ const Homepage25 = () => {
             
         </div>
         
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
