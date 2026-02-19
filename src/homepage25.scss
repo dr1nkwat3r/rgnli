@@ -724,6 +724,7 @@ h1 {
         display: flex;
         gap:2.8%;
         overflow: auto;
+        position: relative;
         // border:1px solid orange;
         
         div {
@@ -740,7 +741,27 @@ h1 {
             border:0.5px solid #919297;
         }
     }
-    
+
+    &__tip {
+        position: absolute;
+        right: 0px;
+        top: 15%;
+        background-color: var(--offwhite);
+        transform-origin: top right;
+        transform: rotate(90deg);
+        z-index: 10;
+        padding: 5px 10px;
+        font-size: 13px;
+        color: var(--darkblue);
+        border: 1px solid var(--lightblue);
+        border-top: none;
+        opacity: 0.9;
+
+        span {
+            display: inline-block;
+            transform: rotate(-90deg);
+        }
+    }
 
     &__title {
         font-size: 2.1rem;
