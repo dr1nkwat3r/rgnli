@@ -58,7 +58,7 @@ const Homepage25 = () => {
     }, []);
   
   return (
-    <HashRouter basename="/">
+    <HashRouter>
         <div className='homepage25'>
                 <div className='sticky-scroll'>
                     <div className='sticky'>

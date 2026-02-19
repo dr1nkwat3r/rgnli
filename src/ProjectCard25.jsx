@@ -139,15 +139,11 @@ const ProjectCard25 = () => {
               (<Link
                   to={project.url} 
                   onClick={(e) => {
-                    e.preventDefault();
                     ReactGA.event({
                       category: 'Project', 
                       action: 'click - Project', 
                       label: project.title,
                     });
-                    setTimeout(() => {
-                      window.location.href = project.url;
-                    }, 100);
                   }}
                   >
                     {project.title}
